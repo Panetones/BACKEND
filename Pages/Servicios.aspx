@@ -5,53 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuadrícula con Botones</title>
-    <style>
-        /* Estilos CSS para la cuadrícula */
-        .grid-container {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuadros con Botones</title>
+   <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 20px;
+            gap: 20px;
         }
 
-        .grid-item {
+        .box {
+            background-color: #ffffff;
             border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
+            padding: 20px;
         }
 
-        /* Estilos para los botones */
-        .edit-button, .delete-button {
-            margin: 5px;
-            padding: 5px 10px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            cursor: pointer;
+        .buttons {
+            display: flex;
+            justify-content: space-between;
         }
 
-        .delete-button {
-            background-color: #FF0000;
-        }
+        /* Agrega más estilos según tus necesidades */
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <form id="form1" runat="server">
-        <div class="grid-container">
-            <!-- Fila 1 -->
-            <div class="grid-item">
-                <asp:Button ID="btnEditar1" runat="server" Text="Editar" CssClass="edit-button" OnClick="btnEditar_Click" />
-                <asp:Button ID="btnEliminar1" runat="server" Text="Eliminar" CssClass="delete-button" OnClick="btnEliminar_Click" />
+           <div class="container">
+        <!-- Recuadro 1 -->
+        <div class="box">
+            <h2>Frenos</h2>
+            <p>Reemplazo de pastillas y discos de freno<br>
+                Reparación de frenos antibloqueo (ABS)<br>
+                Reparación de cilindros de freno y líneas de freno.</p>
+            <div class="buttons">
+                <button>Editar</button>
+                <button>Eliminar</button>
             </div>
-            <div class="grid-item">
-                <asp:Button ID="btnEditar2" runat="server" Text="Editar" CssClass="edit-button" OnClick="btnEditar_Click" />
-                <asp:Button ID="btnEliminar2" runat="server" Text="Eliminar" CssClass="delete-button" OnClick="btnEliminar_Click" />
-            </div>
-            <div class="grid-item">
-                <asp:Button ID="btnEditar3" runat="server" Text="Editar" CssClass="edit-button" OnClick="btnEditar_Click" />
-                <asp:Button ID="btnEliminar3" runat="server" Text="Eliminar" CssClass="delete-button" OnClick="btnEliminar_Click" />
-            </div>
-            <!-- Puedes continuar con las otras filas y columnas -->
         </div>
+
+        <!-- Recuadro 2 -->
+        <div class="box">
+            <h2>Suspensión y Dirección</h2>
+            <p>Reemplazo de amortiguadores y resortes<br>
+Reparación de la dirección y la suspensión.<br>
+  Alineación y balanceo de ruedas.</p>
+            <div class="buttons">
+                <button>Editar</button>
+                <button>Eliminar</button>
+            </div>
+
+            <!-- Recuadro 3 -->
+        <div class="box">
+            <h2>
+                <meta charset="utf-8" />
+                <span style="white-space:pre-wrap;">Sistemas Eléctricos y Electrónicos</span></h2>
+            <p>Diagnóstico mediante lectura de códigos de falla <br>
+Instalación de sistemas de entretenimiento y navegación<br>
+Reparación de sistemas de iluminación.</p>
+            <div class="buttons">
+                <button>Editar</button>
+                <button>Eliminar</button>
+            </div>
+        </div>
+
+        <!-- Recuadro 4 -->
+        <div class="box">
+            <h2>
+                <meta charset="utf-8" />
+                <span style="white-space:pre-wrap;">Mantenimiento<br />
+                Preventivo</span></h2>
+            <p>Cambios de aceite y filtro.<br>
+Cambios de filtro de aire.<br>
+Inspección y mantenimiento de frenos.<br>
+Rotación de neumáticos.<br>
+Alineación y balanceo de ruedas.<br>
+Cambio de bujías y cables.
+Cambio de correas</p>
+            <div class="buttons">
+                <button>Editar</button>
+                <button>Eliminar</button>
+            </div>
+        </div>
+
+        <!-- Repite los recuadros para las otras filas y columnas -->
+        <!-- Recuadro 3 -->
+        <!-- Recuadro 4 -->
+    </div>
     </form>
 </asp:Content>
