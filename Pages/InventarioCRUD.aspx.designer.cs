@@ -11,7 +11,7 @@ namespace CRUD.Pages
 {
 
 
-    public partial class citas_View
+    public partial class InventarioCRUD
     {
     }
 }

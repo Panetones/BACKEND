@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\citas_View.aspx" />
     <Content Include="Pages\CRUD.aspx" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Web.config" />
@@ -78,6 +79,13 @@
     </Compile>
     <Compile Include="MP.Master.designer.cs">
       <DependentUpon>MP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\citas_View.aspx.cs">
+      <DependentUpon>citas_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\citas_View.aspx.designer.cs">
+      <DependentUpon>citas_View.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\CRUD.aspx.cs">
       <DependentUpon>CRUD.aspx</DependentUpon>
