@@ -41,7 +41,7 @@
                         <input type="password" required>
                         <label>Password</label>
                     </div>
-                    <a href="#" class="forgot-pass-link">Olvidaste tuu contraseña?</a>
+                    <a href="#" class="forgot-pass-link">Olvidaste tu contraseña?</a>
                     <button type="submit">Log In</button>
                 </form>
                 <div class="bottom-link">
