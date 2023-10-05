@@ -44,6 +44,13 @@
                 <label for="tbCel2" class="form-label">Segundo Contacto</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbCel2"></asp:TextBox>
             </div>
+            <div class="mb-3">
+                <label for="tbRol" class="form-label" Visible="true">Rol</label>
+                <asp:DropDownList runat="server" CssClass="form-control" ID="ddlRoles">
+                    <asp:ListItem Text="R01" Value="R01" />
+                    <asp:ListItem Text="R02" Value="R02" />
+                </asp:DropDownList>
+            </div>
             <div class="d-flex justify-content-center">
                 <asp:Button runat="server" CssClass="btn btn-primary me-2" ID="BtnCreate" Text="GUARDAR NUEVO USUARIO" Visible="false" OnClick="BtnCreate_Click" />
                 <asp:Button runat="server" CssClass="btn btn-primary me-2" ID="BtnUpdate" Text="GUARDAR MODIFICACION" Visible="false" OnClick="BtnUpdate_Click" />

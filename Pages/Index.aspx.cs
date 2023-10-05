@@ -36,32 +36,31 @@ namespace CRUD.Pages
         {
             Response.Redirect("~/Pages/CRUD.aspx?op=C");
         }
-
         protected void BtnRead_Click(object sender, EventArgs e)
         {
-            string id;
+            string Nid;
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
-            id = selectedrow.Cells[5].Text;
-            Response.Redirect("~/Pages/CRUD.aspx?id="+id+"&op=R");
+            Nid = selectedrow.Cells[5].Text;
+            Response.Redirect("~/Pages/CRUD.aspx?id="+Nid+"&op=R");
         }
 
         protected void BtnUpdate_Click(object sender, EventArgs e)
         {
-            string id;
+            string Nid;
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
-            id = selectedrow.Cells[5].Text;
-            Response.Redirect("~/Pages/CRUD.aspx?id=" + id + "&op=U");
+            Nid = selectedrow.Cells[5].Text;
+            Response.Redirect("~/Pages/CRUD.aspx?id=" + Nid + "&op=U");
         }
 
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
-            string id;
+            string Nid;
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
-            id = selectedrow.Cells[5].Text;
-            Response.Redirect("~/Pages/CRUD.aspx?id=" + id + "&op=D");
+            Nid = selectedrow.Cells[5].Text;
+            Response.Redirect("~/Pages/CRUD.aspx?id=" + Nid + "&op=D");
         }
     }
 }
