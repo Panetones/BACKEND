@@ -45,6 +45,7 @@ namespace CRUD.Pages
                     sID = Request.QueryString["Nid"].ToString();
                     CargarDatos();
                     tbFNac.TextMode = TextBoxMode.DateTime;
+                    
                 }
 
                 if (Request.QueryString["op"] != null)
@@ -76,9 +77,9 @@ namespace CRUD.Pages
         void CargarDatos()
         {
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("sp_loadUsG", con);
+            SqlDataAdapter da = new SqlDataAdapter("sp_GetUserDataWithoutPassword", con);//"sp_loadUsG"
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@cod_u", SqlDbType.Int).Value = sID;
+            da.SelectCommand.Parameters.Add("@cod_u", SqlDbType.Int).Value = sID;//"@cod_u"
             DataSet ds = new DataSet();
             ds.Clear();
             da.Fill(ds);
@@ -123,7 +124,7 @@ namespace CRUD.Pages
             //
             //para el combobox y encontrar el valor seleccionado
             string cbRol = ddlRoles.SelectedValue;
-            string codu = "U000028";
+            string codu = "U000029";
             cmd.Parameters.Add("@cod_u", SqlDbType.Char).Value = codu;
             cmd.Parameters.Add("@cod_r", SqlDbType.Char).Value = cbRol;
             cmd.Parameters.Add("@nameU", SqlDbType.VarChar).Value = tbnombre.Text;

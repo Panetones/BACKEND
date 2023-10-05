@@ -67,15 +67,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientCRUD.aspx" />
+    <Content Include="ClientesView.aspx" />
+    <Content Include="ClientsCRUD.aspx" />
+    <Content Include="HOME.aspx" />
+    <Content Include="IMAGENES\taller.jpg" />
     <Content Include="Pages\Citas.aspx" />
     <Content Include="Pages\CitasCrud.aspx" />
     <Content Include="Pages\CRUD.aspx" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\login.aspx" />
     <Content Include="Pages\Servicios.aspx" />
+    <Content Include="ProductsView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientCRUD.aspx.cs">
+      <DependentUpon>ClientCRUD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientCRUD.aspx.designer.cs">
+      <DependentUpon>ClientCRUD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesView.aspx.cs">
+      <DependentUpon>ClientesView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientesView.aspx.designer.cs">
+      <DependentUpon>ClientesView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsCRUD.aspx.cs">
+      <DependentUpon>ClientsCRUD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientsCRUD.aspx.designer.cs">
+      <DependentUpon>ClientsCRUD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME.aspx.cs">
+      <DependentUpon>HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME.aspx.designer.cs">
+      <DependentUpon>HOME.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MP.Master.cs">
       <DependentUpon>MP.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,6 +158,13 @@
     </Compile>
     <Compile Include="Pages\Servicios.aspx.designer.cs">
       <DependentUpon>Servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsView.aspx.cs">
+      <DependentUpon>ProductsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsView.aspx.designer.cs">
+      <DependentUpon>ProductsView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
