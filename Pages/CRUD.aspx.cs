@@ -120,7 +120,7 @@ namespace CRUD.Pages
             //cmd.CommandText = "INSERT INTO usuarios(cod_u, cod_r, nameU, lp_u, lm_u, ci_u, em_u, fn_u, c1_u, c2_u, pass_u, st_u) VALUES('U000021', @cod_r, @nameU, @lp_u, @lm_u, @ci_u, @em_u, @fn_u, @c1_u, @c2_u, @pass_u, 'ACTIVO')";
             //
             //
-            string codu = "U000024";
+            string codu = "U000026";
             cmd.Parameters.Add("@cod_u", SqlDbType.Char).Value = codu;
             cmd.Parameters.Add("@cod_r", SqlDbType.Char).Value = "R01";
             cmd.Parameters.Add("@nameU", SqlDbType.VarChar).Value = tbnombre.Text;
@@ -140,18 +140,29 @@ namespace CRUD.Pages
 
         protected void BtnUpdate_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("sp_update", con);
+            //variable para los usuarios
+            string usu = "U000025";
+            //variable para los roles
+            string rol = "R02";
+            //variable para los roles
+            string pass = "I2E@56789o";
+            //variable para el estado
+            string est = "ACTIVO";
+            SqlCommand cmd = new SqlCommand("P_insertUsprov", con);
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = sID;
+            cmd.Parameters.Add("@cod_u", SqlDbType.Char).Value = usu;
+            cmd.Parameters.Add("@cod_r", SqlDbType.Char).Value = rol;
             cmd.Parameters.Add("@nameU", SqlDbType.VarChar).Value = tbnombre.Text;
-            cmd.Parameters.Add("@lp_u", SqlDbType.Int).Value = tbAP.Text;
+            cmd.Parameters.Add("@lp_u", SqlDbType.VarChar).Value = tbAP.Text;
             cmd.Parameters.Add("@lm_u", SqlDbType.VarChar).Value = tbAM.Text;
-            cmd.Parameters.Add("@CI", SqlDbType.VarChar).Value = tbCI.Text;
+            cmd.Parameters.Add("@ci_u", SqlDbType.Int).Value = tbCI.Text;
             cmd.Parameters.Add("@em_u", SqlDbType.VarChar).Value = tbEm.Text;
-            cmd.Parameters.Add("@f_nac", SqlDbType.Date).Value = tbFNac.Text;
-            cmd.Parameters.Add("@cel1", SqlDbType.VarChar).Value = tbCel1.Text;
-            cmd.Parameters.Add("@cel2", SqlDbType.VarChar).Value = tbCel2.Text;
+            cmd.Parameters.Add("@fn_u", SqlDbType.Date).Value = tbFNac.Text;
+            cmd.Parameters.Add("@c1_u", SqlDbType.Int).Value = tbCel1.Text;
+            cmd.Parameters.Add("@c2_u", SqlDbType.Int).Value = tbCel2.Text;
+            cmd.Parameters.Add("@pass_u", SqlDbType.Char).Value = pass;
+            cmd.Parameters.Add("@st_u", SqlDbType.VarChar).Value = est;
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("Index.aspx");
