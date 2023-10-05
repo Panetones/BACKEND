@@ -33,31 +33,67 @@ namespace CRUD.Pages
         protected global::System.Web.UI.WebControls.TextBox tbnombre;
 
         /// <summary>
-        /// Control tbedad.
+        /// Control tbAP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbedad;
+        protected global::System.Web.UI.WebControls.TextBox tbAP;
 
         /// <summary>
-        /// Control tbemail.
+        /// Control tbAM.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbemail;
+        protected global::System.Web.UI.WebControls.TextBox tbAM;
 
         /// <summary>
-        /// Control tbdate.
+        /// Control tbCI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbdate;
+        protected global::System.Web.UI.WebControls.TextBox tbCI;
+
+        /// <summary>
+        /// Control tbEm.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbEm;
+
+        /// <summary>
+        /// Control tbFNac.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbFNac;
+
+        /// <summary>
+        /// Control tbCel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCel1;
+
+        /// <summary>
+        /// Control tbCel2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCel2;
 
         /// <summary>
         /// Control BtnCreate.

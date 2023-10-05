@@ -21,7 +21,7 @@ namespace CRUD.Pages
 
         void CargarTabla()
         {
-            SqlCommand cmd = new SqlCommand("sp_load", con);//"sp_load"
+            SqlCommand cmd = new SqlCommand("sp_loadUS", con);//"sp_load"
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
             SqlDataAdapter da= new SqlDataAdapter(cmd);
@@ -42,7 +42,7 @@ namespace CRUD.Pages
             string id;
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
-            id = selectedrow.Cells[1].Text;
+            id = selectedrow.Cells[5].Text;
             Response.Redirect("~/Pages/CRUD.aspx?id="+id+"&op=R");
         }
 
@@ -51,7 +51,7 @@ namespace CRUD.Pages
             string id;
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
-            id = selectedrow.Cells[1].Text;
+            id = selectedrow.Cells[5].Text;
             Response.Redirect("~/Pages/CRUD.aspx?id=" + id + "&op=U");
         }
 
@@ -60,7 +60,7 @@ namespace CRUD.Pages
             string id;
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
-            id = selectedrow.Cells[1].Text;
+            id = selectedrow.Cells[5].Text;
             Response.Redirect("~/Pages/CRUD.aspx?id=" + id + "&op=D");
         }
     }

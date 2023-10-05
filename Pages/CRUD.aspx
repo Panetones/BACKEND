@@ -17,20 +17,36 @@
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbnombre"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <label class="form-label">Edad</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="tbedad"></asp:TextBox>
+                <label class="form-label">Apellido Paterno</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbAP"></asp:TextBox>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Apellido Materno</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbAM"></asp:TextBox>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CI</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbCI"></asp:TextBox>
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="tbemail"></asp:TextBox>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbEm"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <label class="form-label">Fecha de nacimiento</label>
-                <asp:TextBox runat="server" TextMode="Date" CssClass="form-control" ID="tbdate"></asp:TextBox>
+                <label class="form-label">Fecha de Nacimiento</label>
+                <asp:TextBox runat="server" TextMode="Date" CssClass="form-control" ID="tbFNac"></asp:TextBox>
             </div>
-            <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnCreate" Text="Create" Visible="false" OnClick="BtnCreate_Click" />
-            <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnUpdate" Text="Update" Visible="false" onclick="BtnUpdate_Click"/>
-            <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnDelete" Text="Delete" Visible="false" OnClick="BtnDelete_Click" />
+            <div class="mb-3">
+                <label class="form-label">Primer Contacto</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbCel1"></asp:TextBox>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Segundo Contacto</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbCel2"></asp:TextBox>
+            </div>
+            <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnCreate" Text="GUARDAR NUEVO USUARIO" Visible="false" OnClick="BtnCreate_Click" />
+            <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnUpdate" Text="GUARDAR MODIFICACION" Visible="false" onclick="BtnUpdate_Click"/>
+            <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnDelete" Text="ELIMINAR" Visible="false" OnClick="BtnDelete_Click" />
             <asp:Button runat="server" CssClass="btn btn-primary btn-dark" ID="BtnVolver" Text="Volver" Visible="True" OnClick="BtnVolver_Click" />
         </div>
     </form>
