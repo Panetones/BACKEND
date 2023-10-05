@@ -1,14 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MP.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="CRUD.Pages.login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tu-archivo-de-css.css">
     <title>Tu Título</title>
 </asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tu-archivo-de-css.css">
+    <!-- Agrega aquí tus propias hojas de estilo personalizadas si es necesario -->
+</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-        <form runat="server">
+    <form runat="server" class="custom-form">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <span class="hamburger-btn material-symbols-rounded"></span>
@@ -50,7 +51,7 @@
                                         <label>Password</label>
                                     </div>
                                     <a href="#" class="forgot-pass-link">Olvidaste tu contraseña?</a>
-                                    <button type="submit">Log In</button>
+                                    <button type="submit" class="custom-button">Log In</button>
                                 </form>
                                 <div class="bottom-link">
                                     No tienes una cuenta?
@@ -83,7 +84,7 @@
                                             <a href="#" class="option">Términos y Condiciones</a>
                                         </label>
                                     </div>
-                                    <button type="submit">Sign Up</button>
+                                    <button type="submit" class="custom-button">Sign Up</button>
                                 </form>
                                 <div class="bottom-link">
                                     Ya tienes una cuenta?
