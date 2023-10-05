@@ -69,9 +69,11 @@
   <ItemGroup>
     <Content Include="Pages\Citas.aspx" />
     <Content Include="Pages\CitasCrud.aspx" />
+    <Content Include="Pages\Clientes.aspx" />
     <Content Include="Pages\CRUD.aspx" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\login.aspx" />
+    <Content Include="Pages\misAutos.aspx" />
     <Content Include="Pages\Servicios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +99,13 @@
     <Compile Include="Pages\CitasCrud.aspx.designer.cs">
       <DependentUpon>CitasCrud.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Clientes.aspx.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Clientes.aspx.designer.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CRUD.aspx.cs">
       <DependentUpon>CRUD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -117,6 +126,13 @@
     </Compile>
     <Compile Include="Pages\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\misAutos.aspx.cs">
+      <DependentUpon>misAutos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\misAutos.aspx.designer.cs">
+      <DependentUpon>misAutos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Servicios.aspx.cs">
       <DependentUpon>Servicios.aspx</DependentUpon>
