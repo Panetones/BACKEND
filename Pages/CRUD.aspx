@@ -16,27 +16,41 @@
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbnombre"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <label for="tbedad" class="form-label">Edad</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="tbedad"></asp:TextBox>
+                <label for="tbAP" class="form-label">Apellido Paterno</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbAP"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <label for="tbemail" class="form-label">Email</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="tbemail"></asp:TextBox>
+                <label for="tbAM" class="form-label">Apellido Materno</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbAM"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <label for="tbdate" class="form-label">Fecha de nacimiento</label>
-                <asp:TextBox runat="server" TextMode="Date" CssClass="form-control" ID="tbdate"></asp:TextBox>
+                <label for="tbCI" class="form-label">CI</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbCI"></asp:TextBox>
+            </div>
+            <div class="mb-3">
+                <label for="tbEm" class="form-label">Email</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbEm"></asp:TextBox>
+            </div>
+            <div class="mb-3">
+                <label for="tbFNac" class="form-label">Fecha de Nacimiento</label>
+                <asp:TextBox runat="server" TextMode="Date" CssClass="form-control" ID="tbFNac"></asp:TextBox>
+            </div>
+            <div class="mb-3">
+                <label for="tbCel1" class="form-label">Primer Contacto</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbCel1"></asp:TextBox>
+            </div>
+            <div class="mb-3">
+                <label for="tbCel2" class="form-label">Segundo Contacto</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbCel2"></asp:TextBox>
             </div>
             <div class="d-flex justify-content-center">
-                <asp:Button runat="server" CssClass="btn btn-primary me-2" ID="BtnCreate" Text="Create" Visible="false" OnClick="BtnCreate_Click" />
-                <asp:Button runat="server" CssClass="btn btn-primary me-2" ID="BtnUpdate" Text="Update" Visible="false" OnClick="BtnUpdate_Click" />
-                <asp:Button runat="server" CssClass="btn btn-danger me-2" ID="BtnDelete" Text="Delete" Visible="false" OnClick="BtnDelete_Click" />
-                <asp:Button runat="server" CssClass="btn btn-dark" ID="BtnVolver" Text="Volver" Visible="True" OnClick="BtnVolver_Click" />
+                <asp:Button runat="server" CssClass="btn btn-primary me-2" ID="BtnCreate" Text="GUARDAR NUEVO USUARIO" Visible="false" OnClick="BtnCreate_Click" />
+                <asp:Button runat="server" CssClass="btn btn-primary me-2" ID="BtnUpdate" Text="GUARDAR MODIFICACION" Visible="false" OnClick="BtnUpdate_Click" />
+                <asp:Button runat="server" CssClass="btn btn-danger me-2" ID="BtnDelete" Text="ELIMINAR" Visible="false" OnClick="BtnDelete_Click" />
+                <asp:Button runat="server" CssClass="btn btn-primary btn-dark" ID="BtnVolver" Text="Volver" Visible="True" OnClick="BtnVolver_Click" />
             </div>
         </form>
     </div>
-    <!-- Agrega la referencia a Bootstrap JS y Popper.js aquí si es necesario -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </asp:Content>
-

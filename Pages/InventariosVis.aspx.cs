@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CRUD.Pages
 {
-    public partial class citas_View : System.Web.UI.Page
+    public partial class InventariosVis : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -24,31 +24,67 @@ namespace CRUD.Pages
         protected global::System.Web.UI.WebControls.TextBox tbnombre;
 
         /// <summary>
-        /// tbedad control.
+        /// tbAP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbedad;
+        protected global::System.Web.UI.WebControls.TextBox tbAP;
 
         /// <summary>
-        /// tbemail control.
+        /// tbAM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbemail;
+        protected global::System.Web.UI.WebControls.TextBox tbAM;
 
         /// <summary>
-        /// tbdate control.
+        /// tbCI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbdate;
+        protected global::System.Web.UI.WebControls.TextBox tbCI;
+
+        /// <summary>
+        /// tbEm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbEm;
+
+        /// <summary>
+        /// tbFNac control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbFNac;
+
+        /// <summary>
+        /// tbCel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCel1;
+
+        /// <summary>
+        /// tbCel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCel2;
 
         /// <summary>
         /// BtnCreate control.
