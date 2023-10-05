@@ -93,7 +93,7 @@
             top: 0px;
             right: 0px;
             margin: auto;
-            background: #5c5454;
+            background: #9cc4ee;
             background-repeat: no-repeat;
             box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
             transition: all 500ms ease;
@@ -132,13 +132,16 @@
             display: none;
         }
         .lbl-modal{
-            background: #194868;
+            background: #007bff;
             padding: 10px 15px;
             border-radius: 4px;
             cursor: pointer;
             right: 90px;
-            top: 45px;
+            top: 65px;
             position: absolute;
+        }
+        .label{
+            background:#ffffff;
         }
         #btn-modal:checked ~ .table{
             opacity: 1;
@@ -201,9 +204,9 @@
                <Button ID="btn_guardar" OnClick="Btn_Create_Click" runat="server">Guardar</button>
             </div>
            </div>                     
-   </div>
- </div>     
-</div>
+      </div>
+   </div>     
+ </div>
         
         <div class="container">
             <!-- Recuadro 1 -->
