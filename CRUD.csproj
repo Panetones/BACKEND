@@ -71,10 +71,12 @@
     <Content Include="Pages\CitasCrud.aspx" />
     <Content Include="Pages\Clientes.aspx" />
     <Content Include="Pages\CRUD.aspx" />
+    <Content Include="Pages\Imagen\imagenLogin.png" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\login.aspx" />
     <Content Include="Pages\misAutos.aspx" />
     <Content Include="Pages\Servicios.aspx" />
+    <Content Include="Pages\RecursoCSS\EstilosLogin.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
