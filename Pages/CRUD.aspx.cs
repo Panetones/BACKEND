@@ -124,7 +124,7 @@ namespace CRUD.Pages
             //
             //para el combobox y encontrar el valor seleccionado
             string cbRol = ddlRoles.SelectedValue;
-            string codu = "U000029";
+            string codu = "U000030";
             cmd.Parameters.Add("@cod_u", SqlDbType.Char).Value = codu;
             cmd.Parameters.Add("@cod_r", SqlDbType.Char).Value = cbRol;
             cmd.Parameters.Add("@nameU", SqlDbType.VarChar).Value = tbnombre.Text;
