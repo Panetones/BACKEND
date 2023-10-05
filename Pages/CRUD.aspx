@@ -37,11 +37,11 @@
                 <asp:TextBox runat="server" TextMode="Date" CssClass="form-control" ID="tbFNac"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <label for="tbCel1" class="form-label">Primer Contacto</label>
+                <label for="tbCel1" class="form-label">Celular</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbCel1"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <label for="tbCel2" class="form-label">Segundo Contacto</label>
+                <label for="tbCel2" class="form-label">Telefono</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbCel2"></asp:TextBox>
             </div>
             <div class="mb-3">
@@ -58,7 +58,6 @@
                 <asp:Button runat="server" CssClass="btn btn-primary btn-dark" ID="BtnVolver" Text="Volver" Visible="True" OnClick="BtnVolver_Click" />
             </div>
         </form>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </asp:Content>
