@@ -8,8 +8,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <br />
-    <div class="container">
-        <h2 class="text-center">CRUD</h2>
+    <div class="mx-auto" style="width: 250px">
+        <asp:Label runat="server" CssClass="h2" ID="lbltitulo"></asp:Label>
+    </div>
         <form runat="server">
             <div class="mb-3">
                 <label for="tbnombre" class="form-label">Nombre</label>
