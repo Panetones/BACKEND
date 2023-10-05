@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuadrícula con Botones</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuadros con Botones</title>
-   <style>
+    <style>
         /* Estilos CSS */
         body {
             font-family: Arial, sans-serif;
@@ -30,79 +27,99 @@
             background-color: #ffffff;
             border: 1px solid #ccc;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
         }
 
         .buttons {
             display: flex;
             justify-content: space-between;
+            margin-top: 20px;
         }
-        @media (max-width: 900px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-        /* Agrega más estilos según tus necesidades */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <form id="form1" runat="server">
-           <div class="container">
-        <!-- Recuadro 1 -->
-        <div class="box">
-            <h2>Frenos</h2>
-            <p>Reemplazo de pastillas y discos de freno<br>
-                Reparación de frenos antibloqueo (ABS)<br>
-                Reparación de cilindros de freno y líneas de freno.</p>
-            <div class="buttons">
-                <button>Editar</button>
-                <button>Eliminar</button>
+        <div class="container">
+            <!-- Recuadro 1 -->
+            <div class="box">
+                <h2>Frenos</h2>
+                <p>Reemplazo de pastillas y discos de freno<br>
+                    Reparación de frenos antibloqueo (ABS)<br>
+                    Reparación de cilindros de freno y líneas de freno.</p>
+                <div class="buttons">
+                    <button>Editar</button>
+                    <button>Eliminar</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Recuadro 2 -->
-        <div class="box">
-            <h2>Suspensión y Dirección</h2>
-            <p>Reemplazo de amortiguadores y resortes<br>
-                Reparación de la dirección y la suspensión.<br>
-                Alineación y balanceo de ruedas.</p>
-            <div class="buttons">
-                <button>Editar</button>
-                <button>Eliminar</button>
+            <!-- Recuadro 2 -->
+            <div class="box">
+                <h2>Suspensión y Dirección</h2>
+                <p>Reemplazo de amortiguadores y resortes<br>
+                    Reparación de la dirección y la suspensión.<br>
+                    Alineación y balanceo de ruedas.</p>
+                <div class="buttons">
+                    <button>Editar</button>
+                    <button>Eliminar</button>
+                </div>
             </div>
 
             <!-- Recuadro 3 -->
-        <div class="box">
-            <h2>
-                <meta charset="utf-8" />
-                <span style="white-space:pre-wrap;">Sistemas Eléctricos y Electrónicos</span></h2>
-            <p>Diagnóstico mediante lectura de códigos de falla <br>
-                Instalación de sistemas de entretenimiento y navegación<br>
-                Reparación de sistemas de iluminación.</p>
-            <div class="buttons">
-                <button>Editar</button>
-                <button>Eliminar</button>
+            <div class="box">
+                <h2>Sistemas Eléctricos y Electrónicos</h2>
+                <p>Diagnóstico mediante lectura de códigos de falla<br>
+                    Instalación de sistemas de entretenimiento y navegación<br>
+                    Reparación de sistemas de iluminación.</p>
+                <div class="buttons">
+                    <button>Editar</button>
+                    <button>Eliminar</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Recuadro 4 -->
-        <div class="box">
-            <h2>
-                <meta charset="utf-8" />
-                <span style="white-space:pre-wrap;">Mantenimiento<br />
-                Preventivo</span></h2>
-            <p>Cambios de aceite y filtro.<br>
-                Cambios de filtro de aire.<br>
-                Inspección y mantenimiento de frenos.<br>
-                Rotación de neumáticos.<br>
-                Alineación y balanceo de ruedas.<br>
-                Cambio de bujías y cables.
-                Cambio de correas</p>
-            <div class="buttons">
-                <button>Editar</button>
-                <button>Eliminar</button>
+            <!-- Recuadro 4 -->
+            <div class="box">
+                <h2>Mantenimiento Preventivo</h2>
+                <p>Cambios de aceite y filtro.<br>
+                    Cambios de filtro de aire.<br>
+                    Inspección y mantenimiento de frenos.<br>
+                    Rotación de neumáticos.<br>
+                    Alineación y balanceo de ruedas.<br>
+                    Cambio de bujías y cables.<br>
+                    Cambio de correas</p>
+                <div class="buttons">
+                    <button>Editar</button>
+                    <button>Eliminar</button>
+                </div>
             </div>
         </div>
-    </div>
     </form>
 </asp:Content>
