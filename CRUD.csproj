@@ -67,9 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\Citas.aspx" />
+    <Content Include="Pages\CitasCrud.aspx" />
     <Content Include="Pages\CRUD.aspx" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\login.aspx" />
+    <Content Include="Pages\Servicios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +82,20 @@
     </Compile>
     <Compile Include="MP.Master.designer.cs">
       <DependentUpon>MP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Citas.aspx.cs">
+      <DependentUpon>Citas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Citas.aspx.designer.cs">
+      <DependentUpon>Citas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CitasCrud.aspx.cs">
+      <DependentUpon>CitasCrud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CitasCrud.aspx.designer.cs">
+      <DependentUpon>CitasCrud.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\CRUD.aspx.cs">
       <DependentUpon>CRUD.aspx</DependentUpon>
@@ -100,6 +117,13 @@
     </Compile>
     <Compile Include="Pages\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Servicios.aspx.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Servicios.aspx.designer.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
