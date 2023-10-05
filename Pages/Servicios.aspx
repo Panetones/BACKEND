@@ -36,6 +36,11 @@
             display: flex;
             justify-content: space-between;
         }
+        @media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
         /* Agrega más estilos según tus necesidades */
     </style>
@@ -59,8 +64,8 @@
         <div class="box">
             <h2>Suspensión y Dirección</h2>
             <p>Reemplazo de amortiguadores y resortes<br>
-Reparación de la dirección y la suspensión.<br>
-  Alineación y balanceo de ruedas.</p>
+                Reparación de la dirección y la suspensión.<br>
+                Alineación y balanceo de ruedas.</p>
             <div class="buttons">
                 <button>Editar</button>
                 <button>Eliminar</button>
@@ -72,8 +77,8 @@ Reparación de la dirección y la suspensión.<br>
                 <meta charset="utf-8" />
                 <span style="white-space:pre-wrap;">Sistemas Eléctricos y Electrónicos</span></h2>
             <p>Diagnóstico mediante lectura de códigos de falla <br>
-Instalación de sistemas de entretenimiento y navegación<br>
-Reparación de sistemas de iluminación.</p>
+                Instalación de sistemas de entretenimiento y navegación<br>
+                Reparación de sistemas de iluminación.</p>
             <div class="buttons">
                 <button>Editar</button>
                 <button>Eliminar</button>
@@ -87,21 +92,17 @@ Reparación de sistemas de iluminación.</p>
                 <span style="white-space:pre-wrap;">Mantenimiento<br />
                 Preventivo</span></h2>
             <p>Cambios de aceite y filtro.<br>
-Cambios de filtro de aire.<br>
-Inspección y mantenimiento de frenos.<br>
-Rotación de neumáticos.<br>
-Alineación y balanceo de ruedas.<br>
-Cambio de bujías y cables.
-Cambio de correas</p>
+                Cambios de filtro de aire.<br>
+                Inspección y mantenimiento de frenos.<br>
+                Rotación de neumáticos.<br>
+                Alineación y balanceo de ruedas.<br>
+                Cambio de bujías y cables.
+                Cambio de correas</p>
             <div class="buttons">
                 <button>Editar</button>
                 <button>Eliminar</button>
             </div>
         </div>
-
-        <!-- Repite los recuadros para las otras filas y columnas -->
-        <!-- Recuadro 3 -->
-        <!-- Recuadro 4 -->
     </div>
     </form>
 </asp:Content>
