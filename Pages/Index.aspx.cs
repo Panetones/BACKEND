@@ -21,7 +21,7 @@ namespace CRUD.Pages
 
         void CargarTabla()
         {
-            SqlCommand cmd = new SqlCommand("sp_loadUS", con);//"sp_load"
+            SqlCommand cmd = new SqlCommand("sp_loadUsG", con);//"sp_load"
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
             SqlDataAdapter da= new SqlDataAdapter(cmd);
