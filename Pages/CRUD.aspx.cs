@@ -5,6 +5,7 @@ using System.Web.UI;
 using System.Data;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Web.Services.Description;
 
 namespace CRUD.Pages
 {
@@ -14,24 +15,24 @@ namespace CRUD.Pages
         public static string sID = "-1";
         public static string sOpc = "";
         //para generar el cod_u:-----------------------------
-        private static int ObtenerNumeroDeCadena(string cadena)
-        {
-            if (cadena.StartsWith("U") && int.TryParse(cadena.Substring(1), out int numero))
-            {
-                return numero;
-            }
-            else
-            {
-                throw new ArgumentException("El formato del cod_u no es válido.");
-            }
-        }
+        //private static int ObtenerNumeroDeCadena(string cadena)
+        //{
+        //    if (cadena.StartsWith("U") && int.TryParse(cadena.Substring(1), out int numero))
+        //    {
+        //        return numero;
+        //    }
+        //    else
+        //    {
+        //        throw new ArgumentException("El formato del cod_u no es válido.");
+        //    }
+        //}
 
-        private static string GenerarSiguienteValor(string cadena)
-        {
-            int numero = ObtenerNumeroDeCadena(cadena);
-            numero++;
-            return $"U{numero:D6}";
-        }
+        //private static string GenerarSiguienteValor(string cadena)
+        //{
+        //    int numero = ObtenerNumeroDeCadena(cadena);
+        //    numero++;
+        //    return $"U{numero:D6}";
+        //}
 
         //------------------------------------------------------------
         protected void Page_Load(object sender, EventArgs e)
@@ -39,9 +40,9 @@ namespace CRUD.Pages
             //obtener el id
             if (!Page.IsPostBack)
             {
-                if (Request.QueryString["cod_u"] != null)
+                if (Request.QueryString["Nid"] != null)
                 {
-                    sID = Request.QueryString["cod_u"].ToString();
+                    sID = Request.QueryString["Nid"].ToString();
                     CargarDatos();
                     tbFNac.TextMode = TextBoxMode.DateTime;
                 }
@@ -75,7 +76,7 @@ namespace CRUD.Pages
         void CargarDatos()
         {
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("sp_loadUS", con);
+            SqlDataAdapter da = new SqlDataAdapter("sp_loadUsG", con);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@cod_u", SqlDbType.Int).Value = sID;
             DataSet ds = new DataSet();
@@ -120,9 +121,11 @@ namespace CRUD.Pages
             //cmd.CommandText = "INSERT INTO usuarios(cod_u, cod_r, nameU, lp_u, lm_u, ci_u, em_u, fn_u, c1_u, c2_u, pass_u, st_u) VALUES('U000021', @cod_r, @nameU, @lp_u, @lm_u, @ci_u, @em_u, @fn_u, @c1_u, @c2_u, @pass_u, 'ACTIVO')";
             //
             //
-            string codu = "U000026";
+            //para el combobox y encontrar el valor seleccionado
+            string cbRol = ddlRoles.SelectedValue;
+            string codu = "U000028";
             cmd.Parameters.Add("@cod_u", SqlDbType.Char).Value = codu;
-            cmd.Parameters.Add("@cod_r", SqlDbType.Char).Value = "R01";
+            cmd.Parameters.Add("@cod_r", SqlDbType.Char).Value = cbRol;
             cmd.Parameters.Add("@nameU", SqlDbType.VarChar).Value = tbnombre.Text;
             cmd.Parameters.Add("@lp_u", SqlDbType.VarChar).Value = tbAP.Text;
             cmd.Parameters.Add("@lm_u", SqlDbType.VarChar).Value = tbAM.Text;
@@ -140,19 +143,14 @@ namespace CRUD.Pages
 
         protected void BtnUpdate_Click(object sender, EventArgs e)
         {
-            //variable para los usuarios
-            string usu = "U000025";
-            //variable para los roles
-            string rol = "R02";
-            //variable para los roles
-            string pass = "I2E@56789o";
-            //variable para el estado
-            string est = "ACTIVO";
-            SqlCommand cmd = new SqlCommand("P_insertUsprov", con);
+            //cmd.Parameters.Add("@Id", SqlDbType.Int).Value = sID;
+            //para el combobox y encontrar el valor seleccionado
+            string cbRol = ddlRoles.SelectedValue;
+            SqlCommand cmd = new SqlCommand("ModiUsers", con);
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@cod_u", SqlDbType.Char).Value = usu;
-            cmd.Parameters.Add("@cod_r", SqlDbType.Char).Value = rol;
+            cmd.Parameters.Add("@Nid", SqlDbType.Int).Value = sID;
+            cmd.Parameters.Add("@cod_r", SqlDbType.Char).Value = cbRol;
             cmd.Parameters.Add("@nameU", SqlDbType.VarChar).Value = tbnombre.Text;
             cmd.Parameters.Add("@lp_u", SqlDbType.VarChar).Value = tbAP.Text;
             cmd.Parameters.Add("@lm_u", SqlDbType.VarChar).Value = tbAM.Text;
@@ -161,8 +159,6 @@ namespace CRUD.Pages
             cmd.Parameters.Add("@fn_u", SqlDbType.Date).Value = tbFNac.Text;
             cmd.Parameters.Add("@c1_u", SqlDbType.Int).Value = tbCel1.Text;
             cmd.Parameters.Add("@c2_u", SqlDbType.Int).Value = tbCel2.Text;
-            cmd.Parameters.Add("@pass_u", SqlDbType.Char).Value = pass;
-            cmd.Parameters.Add("@st_u", SqlDbType.VarChar).Value = est;
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("Index.aspx");
@@ -170,14 +166,16 @@ namespace CRUD.Pages
 
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("sp_delete", con);
+            SqlCommand cmd = new SqlCommand("deleteUsers", con);
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = sID;
+            cmd.Parameters.Add("@Nid", SqlDbType.Int).Value = sID;
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("Index.aspx");
         }
+
+        
 
         protected void BtnVolver_Click(object sender, EventArgs e)
         {
